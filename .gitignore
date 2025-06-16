@@ -1,19 +1,17 @@
+# 🔐 Archivos de entorno (contienen claves privadas)
+client/.env
+server/.env
 
-# Node.js
-node_modules/
-.env
-dist/
-
-# React
+# 📦 Módulos de Node.js (se regeneran con npm install)
 client/node_modules/
-client/build/
+server/node_modules/
 
-# Logs
+# 🪵 Archivos de log
 *.log
 
-# Vercel (si usas)
-.vercel/
-
-# Sistema operativo
+# 🖥️ Sistema (MacOS, Windows)
 .DS_Store
 Thumbs.db
+
+# 🛠️ Editor (opcional)
+.vscode/
