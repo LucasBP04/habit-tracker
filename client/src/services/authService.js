@@ -1,4 +1,4 @@
-const API_URL = process.env.REACT_APP_API_URL + "/auth";
+const API_URL = process.env.REACT_APP_API_URL + "/api/auth";
 
 export const register = async (userData) => {
   const res = await fetch(`${API_URL}/register`, {
