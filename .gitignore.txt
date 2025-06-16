@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+.env
+dist/
+
+# React
+client/node_modules/
+client/build/
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
