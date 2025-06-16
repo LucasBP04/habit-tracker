@@ -14,7 +14,14 @@ const suggestionsRouter = require('./routes/suggestions');
 
 const authRouter = require('./routes/auth');
 
-app.use(cors());
+const cors = require('cors');
+
+app.use(cors({
+  origin: ['https://habit-tracker-alpha-sooty.vercel.app'], // tu dominio frontend en Vercel
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use('/api/habits', habitRouters);
 app.use('/api/suggestions', suggestionsRouter);
