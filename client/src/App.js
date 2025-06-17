@@ -7,10 +7,10 @@ import Login from './components/Login';
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const getTodayDayName = () => {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  return days[new Date().getDay()];
+  return days[new Date(now.getTime() - now.getTimezoneOffset() * 60000).getDay()];
 };
 const getTodayLocal = () => {
-  const now = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+  const now = new Date();
   const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
   return local.toISOString().split('T')[0];
 };
