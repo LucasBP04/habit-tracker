@@ -10,7 +10,7 @@ const getTodayDayName = () => {
   return days[new Date().getDay()];
 };
 const getTodayLocal = () => {
-  const now = new Date();
+  const now = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
   const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
   return local.toISOString().split('T')[0];
 };

@@ -91,7 +91,7 @@ const updateHabit= async (req, res) =>{
 
 const markHabitCompleted = async (req, res) => {
   const { id } = req.params; // ID del hábito
-  const now = new Date();
+  const now = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
   const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
   const today = localDate.toISOString().split('T')[0]; // "YYYY-MM-DD"
   try {
