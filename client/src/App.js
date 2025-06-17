@@ -252,7 +252,7 @@ function App() {
                   <ul>
                     {habit.records?.slice(-3).map((r, idx) => (
                       <li key={idx}>
-                        {new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().split('T')[0]}: {r.completed ? '✔️' : '❌'}
+                        {getTodayLocal()}: {r.completed ? '✔️' : '❌'}
                       </li>
                     ))}
                   </ul>
