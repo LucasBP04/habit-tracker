@@ -6,9 +6,8 @@ import Login from './components/Login';
 
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const getTodayDayName = () => {
-  const now = new Date();
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  return days[new Date(now.getTime() - now.getTimezoneOffset() * 60000).getDay()];
+  return days[new Date().getDay()];
 };
 const getTodayLocal = () => {
   const now = new Date();
@@ -252,7 +251,7 @@ function App() {
                   <ul>
                     {habit.records?.slice(-3).map((r, idx) => (
                       <li key={idx}>
-                        {getTodayLocal()}: {r.completed ? '✔️' : '❌'}
+                        {new Date(r.date).toISOString().split('T')[0]}: {r.completed ? '✔️' : '❌'}
                       </li>
                     ))}
                   </ul>
