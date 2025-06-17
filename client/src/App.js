@@ -4,10 +4,11 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import Login from './components/Login';
 
-const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const daysOfWeek = ['LUN', 'MAR', 'MIE', 'JUE', 'VIE', 'SAB','DOM'];
 const getTodayDayName = () => {
-  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  return days[new Date().getDay()];
+  const now = new Date();
+  const days = ['LUN', 'MAR', 'MIE', 'JUE', 'VIE', 'SAB','DOM'];
+  return days[new Date(now.getTime() - now.getTimezoneOffset() * 60000).getDay()];
 };
 const getTodayLocal = () => {
   const now = new Date();
