@@ -7,7 +7,7 @@ import Login from './components/Login';
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const getTodayDayName = () => {
   const now = new Date();
-  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   return days[new Date(now.getTime() - now.getTimezoneOffset() * 60000).getDay()];
 };
 const getTodayLocal = () => {
